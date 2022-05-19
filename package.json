@@ -1,8 +1,8 @@
 {
-  "name": "todo-ebytr-backend",
+  "name": "TM-backend",
   "version": "1.0.0",
   "main": "./src/server.ts",
-  "repository": "git@github.com:findCarolinaCosta/todo-ebytr-backend.git",
+  "repository": "git@github.com:findCarolinaCosta/TM-backend.git",
   "author": "findcarolinacosta <carolinadacosta1997@gmail.com>",
   "license": "MIT",
   "dependencies": {
