@@ -5,6 +5,10 @@
   "repository": "git@github.com:findCarolinaCosta/TM-backend.git",
   "author": "findcarolinacosta <carolinadacosta1997@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "db:create": "npx prisma migrate dev",
+    "db:reset": "npx prisma migrate reset"
+  },
   "dependencies": {
     "@prisma/client": "^3.14.0",
     "cors": "^2.8.5",
