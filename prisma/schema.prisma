@@ -21,9 +21,10 @@ model User {
 }
 
 model Task {
-  id   String  @id @unique @default(uuid())
-  task String
-  tags String?
+  id        String   @id @unique @default(uuid())
+  task      String
+  status    Int
+  createdAt DateTime @default(now())
 
   UserTask UserTask[]
   @@map("tasks")
