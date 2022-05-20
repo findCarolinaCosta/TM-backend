@@ -78,17 +78,41 @@ Use yarn:
 yarn db:seed
 ```
 
+### View database:
+
+Use npm:
+```
+npm run db:show
+```
+
+Use yarn:
+```
+yarn db:show
+```
+
 ### Additional configuration
 - Create file `.env`;
 - Copy data below or data from `.env-example` file and paste into the `.env` file;
 - Fill `.env` file with information for data connection, example used with dummy data (mysql):
 
 ```
-DATABASE_URL=
+DATABASE_URL=mysql://UR-USER:UR-PASSWORD@HOST:PORT/DATABASE
 PORT=3002
 ```
 
-Install the dependencies and devDependencies and start the server.
+| Name     | Placeholder | Description                                               |   |   |
+|----------|-------------|-----------------------------------------------------------|---|---|
+| Host     | HOST        | IP address/domain of your database server, e.g. localhost |   |   |
+| Port     | PORT        | Port on which your database server is running, e.g. 5432  |   |   |
+| User     | USER        | Name of your database user, e.g. janedoe                  |   |   |
+| Password | PASSWORD    | Password for your database user                           |   |   |
+| Database | DATABASE    | Name of the database you want to use, e.g. mydb           |   |   |
+
+
+* fonte: https://www.prisma.io/docs/concepts/database-connectors/mysql
+
+
+### Install the dependencies and devDependencies and start the server.
 
 Use npm:
 ```sh
@@ -124,7 +148,7 @@ yarn test
 ## Project report
 This project was developed as part of simulation stage of technical challenge and technical interview.
 Initiative: Career Blitz at Trybe :batedor:
-- [Database diagram]()
+- [Database diagram]()  *_Not available yet_
 
 ## Status report
 :waning_gibbous_moon: In progress
