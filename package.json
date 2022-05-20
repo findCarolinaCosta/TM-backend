@@ -11,7 +11,12 @@
     "test": "jest",
     "lint": "eslint ./src --ext .ts --quiet",
     "db:create": "npx prisma migrate dev",
-    "db:reset": "npx prisma migrate reset"
+    "db:reset": "npx prisma migrate reset",
+    "db:seed": "npx prisma db seed",
+    "db:show": "npx prisma studio"
+  },
+  "prisma": {
+    "seed": "ts-node ./prisma/seeders/seed.ts"
   },
   "dependencies": {
     "@prisma/client": "^3.14.0",
@@ -35,6 +40,7 @@
     "eslint-plugin-sonarjs": "^0.13.0",
     "jest": "^28.1.0",
     "prisma": "^3.14.0",
+    "ts-node": "^10.7.0",
     "ts-node-dev": "^1.1.8",
     "typescript": "^4.6.4"
   }
