@@ -1,18 +1,31 @@
 export interface ICreateTask {
+  userId?: string;
   task: string;
-  tags?: string;
+  status: number;
 }
 
 export interface IUpdateTask {
   id: string;
   task: string;
-  tags?: string;
+  status: number;
+}
+
+interface ITask {
+  id: string;
+  task: string;
+  status: number;
+  createdAt: Date;
+}
+
+interface IUserTask {
+  userId: string;
+  taskId: string;
 }
 
 export interface ITaskTaskModel {
-  create: (data: ICreateTask) => Promise<void>;
-  readOne: (id: string) => Promise<void>;
-  readMany: (userId: string) => Promise<void>;
-  update: (data: IUpdateTask) => Promise<void>;
+  create: (data: ICreateTask) => Promise<ITask | string | null>;
+  readOne: (id: string) => Promise<ITask[]>;
+  readMany: () => Promise<(IUserTask & { tasks: ITask | null })[]>;
+  update: (data: IUpdateTask) => Promise<ITask>;
   delete: (id: string) => Promise<void>;
 }

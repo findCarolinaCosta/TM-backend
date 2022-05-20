@@ -11,7 +11,7 @@ export interface IUpdateUser {
   job?: string;
 }
 
-export interface IUserTaskModel {
+export interface IUserModel {
   create: (data: ICreateUser) => Promise<void>;
   readOne: (userId: string) => Promise<void>;
   update: (data: IUpdateUser) => Promise<void>;
