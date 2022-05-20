@@ -3,7 +3,7 @@
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 [![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://github.com/findCarolinaCosta/TM-backend)
-[![MIT LICENSE](https://github.com/findCarolinaCosta/TM-backend/blob/main/LICENSE)
+[![MIT LICENSE](https://camo.githubusercontent.com/c6239caa38945e7693646486b0337744e4bd84d52807a7a1756d596a0e13676a/68747470733a2f2f696d672e736869656c64732e696f2f6769746875622f6c6963656e73652f65617379626173652f65617379626173652d7265616374)](https://github.com/findCarolinaCosta/TM-backend/blob/main/LICENSE)
 
 This application has task crud routes for consumption from [front-end](https://github.com/findCarolinaCosta/TM-frontend) of [task manger](https://github.com/findCarolinaCosta/TM-fullstack) project.
 
@@ -16,10 +16,10 @@ This application has task crud routes for consumption from [front-end](https://g
 - PUT '/task/:id';
 - DELETE '/task/:id';
   
-- POST '/user';
-- GET '/user';
-- PUT '/user/:id';
-- DELETE '/user/:id';
+- POST '/user'; *_Not available yet_
+- GET '/user'; *_Not available yet_
+- PUT '/user/:id'; *_Not available yet_
+- DELETE '/user/:id'; *_Not available yet_
   
 - API documentation with swagger at '/docs' route;
 
