@@ -27,8 +27,8 @@ export const taskCreate = Joi.object({
 export const taskUpdate = Joi.object({
   id: Joi.string().min(3).required().messages({
     // status code | message
-    'any.required': '400|userId is required',
-    'string.base': '422|userId must be a string',
+    'any.required': '400|id is required',
+    'string.base': '422|id must be a string',
     'string.empty': allFilled,
   }),
   task: Joi.string().min(3).required().messages({

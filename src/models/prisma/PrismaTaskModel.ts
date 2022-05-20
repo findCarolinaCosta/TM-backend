@@ -8,10 +8,10 @@ interface ITask {
   createdAt: Date;
 }
 
-interface IUserTask {
-  userId: string;
-  taskId: string;
-}
+// interface IUserTask {
+//   userId: string;
+//   taskId: string;
+// }
 
 export class PrismaTaskModel implements ITaskTaskModel {
   async create({ task, status }: ICreateTask) {
@@ -26,7 +26,7 @@ export class PrismaTaskModel implements ITaskTaskModel {
   }
 
   async readOne(id: string) {
-    const task: ITask[] = await prisma.task.findMany({
+    const task: ITask | null = await prisma.task.findUnique({
       where: { id },
     });
 
@@ -34,11 +34,13 @@ export class PrismaTaskModel implements ITaskTaskModel {
   }
 
   async readMany() {
-    const tasks: (IUserTask & {
-      tasks: ITask | null;
-    })[] = await prisma.userTask.findMany({
-      include: { tasks: true },
-    });
+    // const tasks: (IUserTask & {
+    //   tasks: ITask | null;
+    // })[] = await prisma.userTask.findMany({
+    //   include: { tasks: true },
+    // });
+
+    const tasks: ITask[] = await prisma.task.findMany();
 
     return tasks;
   }
@@ -60,8 +62,8 @@ export class PrismaTaskModel implements ITaskTaskModel {
       where: { id },
     });
 
-    await prisma.userTask.delete({
-      where: { taskId: id },
-    });
+    // await prisma.userTask.delete({
+    //   where: { taskId: id },
+    // });
   }
 }

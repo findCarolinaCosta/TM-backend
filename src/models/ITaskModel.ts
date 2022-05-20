@@ -17,15 +17,15 @@ interface ITask {
   createdAt: Date;
 }
 
-interface IUserTask {
-  userId: string;
-  taskId: string;
-}
+// interface IUserTask {
+//   userId: string;
+//   taskId: string;
+// }
 
 export interface ITaskTaskModel {
   create: (data: ICreateTask) => Promise<ITask | string | null>;
-  readOne: (id: string) => Promise<ITask[]>;
-  readMany: () => Promise<(IUserTask & { tasks: ITask | null })[]>;
+  readOne: (id: string) => Promise<ITask | null>;
+  readMany: () => Promise<ITask[]>;
   update: (data: IUpdateTask) => Promise<ITask>;
   delete: (id: string) => Promise<void>;
 }

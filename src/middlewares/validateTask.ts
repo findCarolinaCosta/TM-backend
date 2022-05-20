@@ -17,7 +17,9 @@ interface IUpdateTask {
 export class ValidateTask {
   public async execute(req: Request, res: Response, next: NextFunction) {
     const method: string = req.route.stack[0].method;
-    const obj = req.body;
+    const { id } = req.params;
+    const body = req.body;
+    const obj = { ...req.body, id };
 
     const validStatus = ![0, 1, 2].includes(obj.status);
 
@@ -29,7 +31,7 @@ export class ValidateTask {
 
     const error =
       method === 'post'
-        ? validateSchema<ICreateTask>(obj, taskCreate)
+        ? validateSchema<ICreateTask>(body, taskCreate)
         : validateSchema<IUpdateTask>(obj, taskUpdate);
 
     if (error) {
